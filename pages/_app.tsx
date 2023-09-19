@@ -8,9 +8,9 @@ const App = ({ Component, pageProps }: AppProps) => (
       <title />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-    {/* <ChakraBaseProvider> */}
-    <Component {...pageProps} />
-    {/* </ChakraBaseProvider> */}
+    <ChakraBaseProvider>
+      <Component {...pageProps} />
+    </ChakraBaseProvider>
   </>
 );
 
