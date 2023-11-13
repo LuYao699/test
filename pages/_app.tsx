@@ -1,5 +1,6 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { ReduceContextProvider } from "../contexts/ReduceContext";
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
@@ -7,7 +8,9 @@ const App = ({ Component, pageProps }: AppProps) => (
       <title />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-    <Component {...pageProps} />
+    <ReduceContextProvider>
+      <Component {...pageProps} />
+    </ReduceContextProvider>
   </>
 );
 
