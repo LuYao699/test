@@ -2348,6 +2348,11 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
+google-one-tap@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/google-one-tap/-/google-one-tap-1.0.6.tgz#80eaf1985aede9749209d9cd80b8d1539e19eaf0"
+  integrity sha512-sgusL6AmYCsTW/WVpJK0zxsjelPqJt/+3yNj4yHZTJOrHEDO251SR9xbTNB4wYK7nCM86/RaQdsD+8yUNQSQeQ==
+
 gopd@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/gopd/-/gopd-1.0.1.tgz"
