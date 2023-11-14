@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 
 // 接收两个回调函数作为props
+// 登录成功和登录失败
 interface GoogleOneTapButtonProps {
   // 当用户成功登录时调用，传递用户的凭证信息。
   onLoginSuccess: (credential: any) => void;
