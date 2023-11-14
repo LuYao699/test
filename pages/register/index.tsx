@@ -1,11 +1,13 @@
 import React, { useCallback, useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Input, FormControl } from "@chakra-ui/react";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 type FormData = {
-  username?: string;
+  username: string;
   password: string;
-  favlanguage?: string;
+  favlanguage: string;
 };
 
 const MyForm: React.FC = () => {
@@ -15,7 +17,15 @@ const MyForm: React.FC = () => {
     watch,
     unregister,
     formState: { errors },
-  } = useForm<FormData>();
+  } = useForm<FormData>({
+    resolver: zodResolver(
+      z.object({
+        username: z.string().min(1, { message: "至少要填一个数字" }),
+        password: z.string().min(1, { message: "至少要填一个数字" }),
+        favlanguage: z.string(),
+      })
+    ),
+  });
 
   const onSubmit: SubmitHandler<FormData> = useCallback(data => {
     alert(JSON.stringify(data));
@@ -54,6 +64,7 @@ const MyForm: React.FC = () => {
       <br />
       <input type="radio" id="javascript" value="JavaScript" {...register("favlanguage")} />
       <label htmlFor="javascript">JavaScript</label>
+      <span>{errors.favlanguage && errors.favlanguage.message}</span>
       <br />
       <button type="submit">Submit</button>
     </form>
