@@ -31,7 +31,7 @@ const ModalIndex = React.forwardRef((props, ref) => {
   return (
     <Flex pos="relative">
       <Flex sx={{ "& input:focus": { color: "red" }, color: "black" }}>
-        <Input ref={inputRef} defaultValue="张三"></Input>
+        <Input ref={inputRef} defaultValue="李四"></Input>
         <Input ref={inputRef2} defaultValue="里斯"></Input>
       </Flex>
     </Flex>
