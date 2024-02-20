@@ -5,6 +5,7 @@ const ModalIndex = React.forwardRef((props, ref) => {
   const inputRef = useRef<any>(null);
   const inputRef2 = useRef<any>(null);
   console.log(8888);
+  console.log(9999);
 
   useImperativeHandle(
     ref,
