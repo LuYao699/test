@@ -4,6 +4,8 @@ import { Flex, Input } from "@chakra-ui/react";
 const ModalIndex = React.forwardRef((props, ref) => {
   const inputRef = useRef<any>(null);
   const inputRef2 = useRef<any>(null);
+  console.log(8888);
+
   useImperativeHandle(
     ref,
     () => {
